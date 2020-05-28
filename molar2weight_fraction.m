@@ -78,7 +78,7 @@ for k = 1:N_sub
         sub{k}.x = 0;
     end
     
-    if (get_name(sub{k}.id) == Inf)
+    if isequal(get_name(sub{k}.id),Inf) %(get_name(sub{k}.id) == Inf)
         sub{k}.w = 0;
     else
     sub{k}.w = ((sub{k}.x)*M(k))/(sum_M);
